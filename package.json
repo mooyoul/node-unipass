@@ -1,6 +1,6 @@
 {
   "name": "unipass",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "Node.js API for accessing Unipass (Customs Clearance System of Korean Customs Service)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
