@@ -6,8 +6,8 @@
   "types": "dist/index.d.ts",
   "dependencies": {
     "axios": "^0.19.2",
-    "dayjs": "^1.8.28",
-    "fast-xml-parser": "^3.17.4"
+    "fast-xml-parser": "^3.17.4",
+    "moment-timezone": "^0.5.31"
   },
   "devDependencies": {
     "@prescott/commitlint-preset": "1.0.0",

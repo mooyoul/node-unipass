@@ -1,6 +1,5 @@
-import * as dayjs from "dayjs";
-import * as customParseFormat from "dayjs/plugin/customParseFormat";
 import { parse as parseXML } from "fast-xml-parser";
+import * as moment from "moment-timezone";
 
 import {
   CompactQueryResultRecord,
@@ -8,8 +7,6 @@ import {
   MultipleQueryResult,
   QueryResult,
 } from "./types";
-
-dayjs.extend(customParseFormat);
 
 export { QueryResult };
 
@@ -47,7 +44,7 @@ export class CargoClearanceProgressParser {
         houseBL: node.hblNo?.[0],
         masterBL: node.mblNo?.[0],
         arrival: {
-          date: dayjs(node.etprDt?.[0], "YYYYMMDD", true as any).toDate(),
+          date: moment.tz(node.etprDt?.[0], "YYYYMMDD", true, "Asia/Seoul").toDate(),
           port: {
             code: node.dsprCd?.[0],
             name: node.dsprNm?.[0],
@@ -71,7 +68,7 @@ export class CargoClearanceProgressParser {
       masterBL: info.mblNo?.[0],
       houseBL: info.hblNo?.[0],
       arrival: {
-        date: dayjs(info.etprDt?.[0], "YYYYMMDD", true as any).toDate(),
+        date: moment.tz(info.etprDt?.[0], "YYYYMMDD", true, "Asia/Seoul").toDate(),
         port: {
           code: info.dsprCd?.[0],
           name: info.dsprNm?.[0],
@@ -95,7 +92,7 @@ export class CargoClearanceProgressParser {
       status: {
         code: info.prgsStCd?.[0],
         summary: info.prgsStts?.[0],
-        updatedAt: dayjs(info.prcsDttm?.[0], "YYYYMMDDHHmmss", true as any).toDate(),
+        updatedAt: moment.tz(info.prcsDttm?.[0], "YYYYMMDDHHmmss", true, "Asia/Seoul").toDate(),
       },
       voyage: info.vydf?.[0],
       product: info.prnm?.[0],
@@ -137,7 +134,7 @@ export class CargoClearanceProgressParser {
       agency: info.agnc?.[0],
       events: events.map((node: any) => ({
         summary: node.cargTrcnRelaBsopTpcd?.[0],
-        updatedAt: dayjs(node.prcsDttm?.[0], "YYYYMMDDHHmmss", true as any).toDate(),
+        updatedAt: moment.tz(node.prcsDttm?.[0], "YYYYMMDDHHmmss", true, "Asia/Seoul").toDate(),
         shed: {
           code: node.shedSgn?.[0] || undefined,
           name: node.shedNm?.[0] || undefined,
@@ -148,7 +145,7 @@ export class CargoClearanceProgressParser {
           value: parseFloat(node.wght?.[0]) || undefined,
         },
         carry: {
-          date: node.rlbrDttm?.[0] && dayjs(node.rlbrDttm?.[0], "YYYY-MM-DD HH:mm:ss", true as any).toDate(),
+          date: node.rlbrDttm?.[0] && moment.tz(node.rlbrDttm?.[0], "YYYY-MM-DD HH:mm:ss", true, "Asia/Seoul").toDate(),
           summary: node.rlbrCn?.[0] || undefined,
           notes: node.rlbrBssNo?.[0] || undefined,
         },
