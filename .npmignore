@@ -1,0 +1,16 @@
+.idea
+.github
+*.tgz
+*.log
+src
+docs
+fixtures
+test
+assets
+examples
+
+renovate.json
+.releaserc.json
+jest*
+tsconfig*
+tslint*
