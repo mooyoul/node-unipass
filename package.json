@@ -13,7 +13,7 @@
     "@prescott/commitlint-preset": "1.0.1",
     "@prescott/semantic-release-config": "1.0.0",
     "@prescott/tslint-preset": "1.0.0",
-    "@types/jest": "26.0.10",
+    "@types/jest": "26.0.12",
     "@types/nock": "11.1.0",
     "@types/node": "12.12.54",
     "@types/sinon": "9.0.5",
