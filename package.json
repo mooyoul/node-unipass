@@ -18,7 +18,7 @@
     "@types/node": "12.12.62",
     "@types/sinon": "9.0.8",
     "husky": "4.3.0",
-    "jest": "26.4.2",
+    "jest": "26.5.0",
     "nock": "13.0.4",
     "semantic-release": "17.1.2",
     "sinon": "9.1.0",
