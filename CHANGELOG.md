@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/mooyoul/node-unipass/compare/v1.0.2...v1.0.3) (2021-01-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v0.21.1 [security] ([1a35cca](https://github.com/mooyoul/node-unipass/commit/1a35ccac0a0dc00d74727a9ea01bcb5a54dd3f3e))
+
 ## [1.0.2](https://github.com/mooyoul/node-unipass/compare/v1.0.1...v1.0.2) (2020-10-23)
 
 
