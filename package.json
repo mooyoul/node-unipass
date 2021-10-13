@@ -15,7 +15,7 @@
     "@prescott/tslint-preset": "1.0.1",
     "@types/jest": "27.0.2",
     "@types/nock": "11.1.0",
-    "@types/node": "12.20.29",
+    "@types/node": "12.20.33",
     "@types/sinon": "10.0.4",
     "husky": "7.0.2",
     "jest": "27.2.5",
