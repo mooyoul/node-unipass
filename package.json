@@ -19,7 +19,7 @@
     "@types/sinon": "10.0.11",
     "husky": "8.0.1",
     "jest": "28.1.0",
-    "nock": "13.2.4",
+    "nock": "13.2.6",
     "semantic-release": "19.0.2",
     "sinon": "14.0.0",
     "ts-jest": "28.0.4",
