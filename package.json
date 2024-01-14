@@ -10,7 +10,7 @@
     "moment-timezone": "^0.5.31"
   },
   "devDependencies": {
-    "@prescott/commitlint-preset": "1.0.3",
+    "@prescott/commitlint-preset": "1.0.9",
     "@prescott/semantic-release-config": "1.0.1",
     "@prescott/tslint-preset": "1.0.1",
     "@types/jest": "28.1.8",
